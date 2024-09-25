@@ -1,0 +1,57 @@
+{
+  "verifyForm": {
+    "bidderNumber": "Bieternummer",
+    "auctionNumber": "Auktionsnummer",
+    "email": "E-Mail",
+    "submit": "Absenden",
+    "loading": "Lädt...",
+    "switchLanguage": "Sprache wechseln"
+  },
+  "Not-Found": {
+    "title": "Seite nicht gefunden",
+    "text": "Entschuldigung, wir konnten die Seite, nach der Sie suchen, nicht finden.",
+    "goBackHome": "Zurück zur Startseite"
+  },
+  "Header": {
+    "search": "Suchen",
+    "contacts": "Kontakte",
+    "home": "Home",
+    "auctions": "Auktionen"
+  },
+  "Invoice": {
+    "invoice": "Rechnung",
+    "dearCustomer": "Sehr geehrter Kunde,",
+    "pleaseTransfer": "Bitte überweisen Sie den Betrag auf folgende Kontoverbindung: ",
+    "purpose": "Verwendungszweck: ",
+    "catalogNr": "Kat. Nr.: ",
+    "name": "Kurzbezeichnung",
+    "price": "Preis",
+    "vat": "MwSt",
+    "vat-Euro": "MwSt-€",
+    "paymentRequest": "Wir bitten Sie, die Zahlung innerhalb von 10 Tagen nach Erhalt der Rechnung vorzunehmen.",
+    "kindRegards": "Mit freundlichen Grüßen",
+    "auctionHouse": "Ihr Kunstauktionshaus Georg Rehm"
+  },
+
+  "ShippingForm": {
+    "chooseMethod": "Liefermethode wählen",
+    "shiping": "Versand",
+    "pickup": "Abholung",
+    "mailboxes": "Mail Boxes Etc.",
+    "address": "Adresse:",
+    "postalCode": "PLZ:",
+    "city": "Stadt:",
+    "country": "Land:",
+    "placeholderAddress": "Straße, Hausnummer, Wohnung",
+    "placeholderPostalCode": "Postleitzahl",
+    "placeholderCity": "Stadt",
+    "selectCountry": "Land wählen:",
+    "searchCountry": "Land suchen",
+    "pickupDate": "Abholdatum:",
+    "pickupInfo": "Abholinformationen (optional):",
+    "placeholderPickupDate": "TT/MM/JJJJ",
+    "placeholderPickupInfo": "Zusätzliche Abholinformationen eingeben",
+    "comments": "Kommentare (optional):",
+    "map": "Sie können Ihre Waren an folgender Adresse abholen:"
+  }
+}

@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.a4-page {
+  width: 210mm;
+  height: 297mm;
+  padding: 20mm;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+@media print {
+  .a4-page {
+    page-break-after: always;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 20mm;
+  width: calc(100% - 40mm);
+}

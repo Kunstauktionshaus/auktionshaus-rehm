@@ -1,0 +1,56 @@
+{
+  "verifyForm": {
+    "bidderNumber": "Bidder Number",
+    "auctionNumber": "Auction Number",
+    "email": "Email",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "switchLanguage": "Switch Language"
+  },
+  "Not-Found": {
+    "title": "Page not found",
+    "text": "Sorry, we couldn’t find the page you’re looking for.",
+    "goBackHome": "Go back home"
+  },
+  "Header": {
+    "search": "Search",
+    "contacts": "Contacts",
+    "home": "Home",
+    "auctions": "Auctions"
+  },
+  "Invoice": {
+    "invoice": "Invoice",
+    "dearCustomer": "Dear customer,",
+    "pleaseTransfer": "Please transfer the amount to the following bank account: ",
+    "purpose": "Intended use: ",
+    "catalogNr": "Cat. Nr.: ",
+    "name": "Name",
+    "price": "Price",
+    "vat": "VAT",
+    "vat-Euro": "VAT-€",
+    "paymentRequest": "We kindly request that you make the payment within 10 days of receiving the invoice.",
+    "kindRegards": "Kind Regards",
+    "auctionHouse": "Your Kunstauktionshaus Georg Rehm"
+  },
+  "ShippingForm": {
+    "chooseMethod": "Choose Delivery Method",
+    "shiping": "Shipping",
+    "pickup": "Pick up",
+    "mailboxes": "Mail Boxes Etc.",
+    "address": "Address:",
+    "postalCode": "Postal code:",
+    "city": "City:",
+    "country": "Country:",
+    "placeholderAddress": "Street, house number, apartment",
+    "placeholderPostalCode": "Postal code",
+    "placeholderCity": "City",
+    "selectCountry": "Select country:",
+    "searchCountry": "Search country",
+    "pickupDate": "Pickup date:",
+    "pickupInfo": "Pickup info (optional):",
+    "placeholderPickupDate": "MM/DD/YYYY",
+    "placeholderPickupInfo": "Enter additional pickup information",
+    "comments": "Comments (optional):",
+    "map": "You can pick up your items at the following address:"
+  }
+}
