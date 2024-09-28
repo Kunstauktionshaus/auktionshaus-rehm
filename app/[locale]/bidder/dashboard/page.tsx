@@ -12,6 +12,7 @@ const BidderDashboard = async () => {
 
   return (
     <div>
+      <p>Bidder data:</p>
       <p>{bidderData.name}</p>
       <p>{bidderData.surname}</p>
       <p>{bidderData.email}</p>
