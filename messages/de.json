@@ -1,8 +1,8 @@
 {
   "verifyForm": {
-    "bidderNumber": "Bieternummer",
-    "auctionNumber": "Auktionsnummer",
-    "email": "E-Mail",
+    "bidderNumber": "Bieternummer*",
+    "auctionNumber": "Auktionsnummer*",
+    "email": "E-Mail*",
     "submit": "Absenden",
     "loading": "Lädt...",
     "switchLanguage": "Sprache wechseln"

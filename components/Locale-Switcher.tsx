@@ -20,14 +20,14 @@ const LocalSwitcher = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative font-montserrat">
       <div className="flex items-center space-x-4 py-2 px-4">
         <button
           onClick={() => changeLocale("en")}
           className={`text-base ${
             currentLocale === "en"
               ? "text-dark-blue font-bold border-b-2 border-dark-blue"
-              : "text-gray-500"
+              : "text-grafit"
           } hover:text-dark-blue`}
         >
           EN
@@ -37,7 +37,7 @@ const LocalSwitcher = () => {
           className={`text-base  ${
             currentLocale === "de"
               ? "text-dark-blue font-bold border-b-2 border-dark-blue"
-              : "text-gray-500"
+              : "text-grafit"
           } hover:text-dark-blue`}
         >
           DE

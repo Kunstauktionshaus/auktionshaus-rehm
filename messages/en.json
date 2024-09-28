@@ -1,8 +1,8 @@
 {
   "verifyForm": {
-    "bidderNumber": "Bidder Number",
-    "auctionNumber": "Auction Number",
-    "email": "Email",
+    "bidderNumber": "Bidder Number*",
+    "auctionNumber": "Auction Number*",
+    "email": "Email*",
     "submit": "Submit",
     "loading": "Loading...",
     "switchLanguage": "Switch Language"

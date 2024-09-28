@@ -8,7 +8,7 @@ const Logo = () => {
 
   return (
     <Link href={`/${locale}/`}>
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4 font-montserrat">
         <Image
           src={LOGO}
           alt="Auktionhaus GR Logo"
@@ -19,7 +19,7 @@ const Logo = () => {
         <div className="hidden md:flex flex-col">
           <span>
             {" "}
-            <span className="text-xs md:text-sm font-bold text-dark-blue uppercase">
+            <span className="text-xs md:text-sm font-bold text-grafit uppercase">
               Kunst
             </span>
             <span className="text-xs md:text-sm  text-dark-beige uppercase">
@@ -27,7 +27,7 @@ const Logo = () => {
             </span>
           </span>
 
-          <span className="text-xs md:text-sm font-bold text-dark-blue uppercase">
+          <span className="text-xs md:text-sm font-bold text-grafit uppercase">
             Georg Rehm
           </span>
           <span className="text-xs md:text-sm font-semibold text-rose uppercase">

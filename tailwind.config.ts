@@ -8,13 +8,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        satoshi: ["Satoshi", "sans-serif"],
-        inter: ["Inter", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
       },
       colors: {
+        grafit: "#454d4f",
         "dark-blue": "#242C5C",
-        beige: "#dfd4bf",
-        "dark-beige": " #8c8185",
+        beige: "#fbf6f3",
+        "dark-beige": "#9b988f",
         rose: "#b35a66",
         mint: "#699b72",
       },
