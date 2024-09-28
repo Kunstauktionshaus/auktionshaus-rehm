@@ -11,6 +11,17 @@ export const ObjectsFiltersSchema = z.object({
   C1: z.string(),
 });
 
+export const BidderItemsSchema = z
+  .array(
+    z.object({
+      id: z.number(),
+      catalogNumber: z.number(),
+      header: z.string(),
+      price: z.number(),
+    }),
+  )
+  .nonempty("Objects list cannot be empty");
+
 export const SessionObjectSchema = z.object({
   id: z.number(),
   auctionNumber: z.number(),
@@ -22,14 +33,5 @@ export const SessionObjectSchema = z.object({
   provisionSt: z.number().optional(),
   provisionPl: z.number().optional(),
   isItemsPaid: z.boolean().optional(),
-  objects: z
-    .array(
-      z.object({
-        id: z.number(),
-        catalogNumber: z.number(),
-        header: z.string(),
-        price: z.number(),
-      }),
-    )
-    .nonempty("Objects list cannot be empty"),
+  objects: BidderItemsSchema,
 });
