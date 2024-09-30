@@ -22,7 +22,7 @@ const Logo = () => {
             <span className="text-xs md:text-sm font-bold text-grafit uppercase">
               Kunst
             </span>
-            <span className="text-xs md:text-sm  text-dark-beige uppercase">
+            <span className="text-xs md:text-sm  text-grafit uppercase">
               auktionshaus
             </span>
           </span>

@@ -3,12 +3,17 @@ import axios from "axios";
 import { createSession } from "@session";
 import {
   BidderFiltersSchema,
+  BidderItemsArraySchema,
+  BidderItemsSchema,
   ObjectsFiltersSchema,
   SessionObjectSchema,
 } from "@schemas";
+import { z } from "zod";
 
 const URL = process.env.BIDDERS_TABLE_LINK_GR as string;
 const OBJECTS_URL = process.env.OBJECTS_TABLE_LINK_GR as string;
+
+type BidderItem = z.infer<typeof BidderItemsSchema>;
 
 export async function GET(req: NextRequest) {
   try {
@@ -29,12 +34,36 @@ export async function GET(req: NextRequest) {
     if (bidder.length > 0) {
       const objects = await getObjects(objectsFilters);
 
-      const filteredObjects = objects.map((item: any) => ({
-        id: item._id,
-        catalogNumber: item.I,
-        header: item.D,
-        price: item.C3,
-      }));
+      const filteredObjects = BidderItemsArraySchema.parse(
+        objects.map(
+          (item: {
+            _id: number;
+            I: number;
+            D: string;
+            Y3: string;
+            C3: number;
+            E3: boolean;
+          }) => ({
+            id: item._id,
+            catalogNumber: item.I,
+            headerDE: item.D,
+            headerEN: item.Y3,
+            price: item.C3,
+            canBeShipped: item.E3,
+          }),
+        ),
+      );
+
+      let shippingCase: number;
+
+      if (bidder[0].P1) {
+        shippingCase = 3;
+      } else {
+        const allShippable = filteredObjects.every(
+          (item: BidderItem) => item.canBeShipped,
+        );
+        shippingCase = allShippable ? 1 : 2;
+      }
 
       const objectToSave = SessionObjectSchema.parse({
         id: bidder[0]._id,
@@ -43,6 +72,8 @@ export async function GET(req: NextRequest) {
         name: bidder[0].C,
         surname: bidder[0].D,
         email: bidder[0].E,
+        notEU: bidder[0].P1,
+        shippingCase: shippingCase,
         priceForShipping: bidder[0].O,
         provisionSt: bidder[0].X2,
         provisionPl: bidder[0].H3,

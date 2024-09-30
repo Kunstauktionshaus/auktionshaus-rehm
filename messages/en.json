@@ -34,7 +34,7 @@
   },
   "ShippingForm": {
     "chooseMethod": "Choose Delivery Method",
-    "shiping": "Shipping",
+    "shipping": "Shipping",
     "pickup": "Pick up",
     "mailboxes": "Mail Boxes Etc.",
     "address": "Address:",

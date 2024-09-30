@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useTransition } from "react";
 
-type BidderLoginFormValues = z.infer<typeof BidderFiltersSchema>;
+type BidderVerifyFormValues = z.infer<typeof BidderFiltersSchema>;
 
 const BidderVerifyForm = () => {
   const router = useRouter();
@@ -25,11 +25,11 @@ const BidderVerifyForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<BidderLoginFormValues>({
+  } = useForm<BidderVerifyFormValues>({
     resolver: zodResolver(BidderFiltersSchema),
   });
 
-  const onSubmit = async (data: BidderLoginFormValues) => {
+  const onSubmit = async (data: BidderVerifyFormValues) => {
     setError(null);
     setSuccessMessage(null);
     startTransition(async () => {
@@ -65,7 +65,7 @@ const BidderVerifyForm = () => {
       <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label
-            className="block text-dark-blue text-sm font-bold mb-1"
+            className="block text-grafit text-sm font-bold mb-1"
             htmlFor="auctionNumber"
           >
             {t("auctionNumber")}
@@ -80,7 +80,7 @@ const BidderVerifyForm = () => {
         </div>
         <div>
           <label
-            className="block text-dark-blue text-sm font-bold mb-1"
+            className="block text-grafit text-sm font-bold mb-1"
             htmlFor="bidderNumber"
           >
             {t("bidderNumber")}
@@ -95,7 +95,7 @@ const BidderVerifyForm = () => {
         </div>
         <div>
           <label
-            className="block text-dark-blue text-sm font-bold mb-1"
+            className="block text-grafit text-sm font-bold mb-1"
             htmlFor="email"
           >
             {t("email")}

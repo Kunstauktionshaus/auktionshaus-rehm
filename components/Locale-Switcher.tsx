@@ -26,7 +26,7 @@ const LocalSwitcher = () => {
           onClick={() => changeLocale("en")}
           className={`text-base ${
             currentLocale === "en"
-              ? "text-dark-blue font-bold border-b-2 border-dark-blue"
+              ? "text-grafit font-bold border-b-2 border-dark-blue"
               : "text-grafit"
           } hover:text-dark-blue`}
         >
@@ -36,7 +36,7 @@ const LocalSwitcher = () => {
           onClick={() => changeLocale("de")}
           className={`text-base  ${
             currentLocale === "de"
-              ? "text-dark-blue font-bold border-b-2 border-dark-blue"
+              ? "text-grafit font-bold border-b-2 border-dark-blue"
               : "text-grafit"
           } hover:text-dark-blue`}
         >

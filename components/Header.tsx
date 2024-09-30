@@ -11,7 +11,7 @@ const Header = () => {
           <LocalSwitcher />
         </div>
       </div>
-      {/* <NavComponent /> */}
+      <NavComponent />
     </header>
   );
 };

@@ -11,16 +11,16 @@ export const ObjectsFiltersSchema = z.object({
   C1: z.string(),
 });
 
-export const BidderItemsSchema = z
-  .array(
-    z.object({
-      id: z.number(),
-      catalogNumber: z.number(),
-      header: z.string(),
-      price: z.number(),
-    }),
-  )
-  .nonempty("Objects list cannot be empty");
+export const BidderItemsSchema = z.object({
+  id: z.number(),
+  catalogNumber: z.number(),
+  headerDE: z.string(),
+  headerEN: z.string().optional(),
+  price: z.number(),
+  canBeShipped: z.boolean().optional(),
+});
+
+export const BidderItemsArraySchema = z.array(BidderItemsSchema);
 
 export const SessionObjectSchema = z.object({
   id: z.number(),
@@ -29,9 +29,38 @@ export const SessionObjectSchema = z.object({
   name: z.string(),
   surname: z.string(),
   email: z.string().email(),
+  notEU: z.boolean(),
+  shippingCase: z.number().optional(),
   priceForShipping: z.number().optional(),
   provisionSt: z.number().optional(),
   provisionPl: z.number().optional(),
   isItemsPaid: z.boolean().optional(),
-  objects: BidderItemsSchema,
+  objects: BidderItemsArraySchema,
 });
+
+export const PickupFormSchema = z.object({
+  method: z.literal("1"),
+  pickupDate: z.date(),
+  pickupInfo: z.string(),
+  comments: z.string(),
+});
+
+export const ShippingFormSchema = z.object({
+  method: z.literal("2"),
+  address: z.string(),
+  postalCode: z.string(),
+  city: z.string(),
+  country: z.string(),
+  comments: z.string(),
+});
+
+export const MailboxesFormSchema = z.object({
+  method: z.literal("4"),
+  comments: z.string(),
+});
+
+export const CombinedFormSchema = z.union([
+  PickupFormSchema,
+  ShippingFormSchema,
+  MailboxesFormSchema,
+]);

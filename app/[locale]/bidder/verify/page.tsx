@@ -1,4 +1,4 @@
-import BidderVerifyForm from "@components/BidderLoginForm";
+import BidderVerifyForm from "@components/bidder/BidderVerifyForm";
 import { getSession } from "@session";
 import { redirect } from "next/navigation";
 
