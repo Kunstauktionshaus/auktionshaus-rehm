@@ -1,11 +1,16 @@
 {
   "verifyForm": {
-    "bidderNumber": "Bieternummer*",
-    "auctionNumber": "Auktionsnummer*",
-    "email": "E-Mail*",
-    "submit": "Absenden",
+    "bidderNumber": "Bieternummer",
+    "auctionNumber": "Auktionsnummer",
+    "email": "E-Mail",
+    "submit": "Senden",
     "loading": "Lädt...",
-    "switchLanguage": "Sprache wechseln"
+    "switchLanguage": "Sprache wechseln",
+    "numberError": "Das Feld muss mindestens 1 Zeichen enthalten",
+    "emailError": "Ungültige E-Mail-Adresse",
+    "responseSuccess": "Bieter wurde erfolgreich gefunden.",
+    "responseError": "Bieter wurde nicht gefunden.",
+    "serverError": "Serverfehler. Bitte versuchen Sie es später erneut."
   },
   "Not-Found": {
     "title": "Seite nicht gefunden",

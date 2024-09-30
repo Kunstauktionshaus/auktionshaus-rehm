@@ -11,15 +11,15 @@ const NavComponent = () => {
   const t = useTranslations("Header");
 
   return (
-    <div className="bg-beige p-4 shadow-md font-lato">
-      <nav className="flex justify-center space-x-6 text-grafit max-w-screen-xl m-auto">
+    <div className="w-full">
+      <nav className="flex justify-center space-x-6 text-black font-semibold uppercase max-w-screen-xl m-auto">
         <Link
           href={"#"}
           // href={`/${locale}/house`}
           className={
             currentPath === `/${locale}/house`
-              ? "text-rose uppercase"
-              : "hover:text-rose hover:font-semibold transition-colors uppercase"
+              ? "text-teal"
+              : "hover:text-teal transition-colors"
           }
         >
           {t("home")}
@@ -29,8 +29,8 @@ const NavComponent = () => {
           // href={`/${locale}/auctions`}
           className={
             currentPath === `/${locale}/auctions`
-              ? "text-rose font-semibold uppercase"
-              : "hover:text-rose hover:font-semibold transition-colors uppercase"
+              ? "text-teal"
+              : "hover:text-teal transition-colors "
           }
         >
           {t("auctions")}
@@ -40,8 +40,8 @@ const NavComponent = () => {
           // href={`/${locale}/contacts`}
           className={
             currentPath === `/${locale}/contacts`
-              ? "text-rose font-semibold uppercase"
-              : "hover:text-rose hover:font-semibold transition-colors uppercase"
+              ? "text-teal"
+              : "hover:text-teal transition-colors "
           }
         >
           {t("contacts")}

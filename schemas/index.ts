@@ -1,8 +1,8 @@
 import * as z from "zod";
 
 export const BidderFiltersSchema = z.object({
-  A: z.string().trim(),
-  B: z.string().trim(),
+  A: z.string().trim().nonempty(),
+  B: z.string().trim().nonempty(),
   E: z.string().email("Invalid email address"),
 });
 

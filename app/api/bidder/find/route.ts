@@ -83,17 +83,14 @@ export async function GET(req: NextRequest) {
 
       await createSession(objectToSave);
 
-      return NextResponse.json("Bidder found");
+      return NextResponse.json({ status: 200 });
     } else {
-      return NextResponse.json({ error: "Bidder not found" }, { status: 404 });
+      return NextResponse.json({ status: 404 });
     }
   } catch (error: any) {
-    return NextResponse.json(
-      { error: "Server error. Please try again later." },
-      {
-        status: 500,
-      },
-    );
+    return NextResponse.json({
+      status: 500,
+    });
   }
 }
 

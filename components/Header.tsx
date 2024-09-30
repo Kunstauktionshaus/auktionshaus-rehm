@@ -4,14 +4,12 @@ import NavComponent from "./Navigation";
 
 const Header = () => {
   return (
-    <header className="bg-white">
-      <div className="p-2 flex items-center justify-between  m-auto">
+    <header className="w-full bg-white font-montserrat p-4">
+      <div className="flex justify-between items-center">
         <Logo />
-        <div className="flex items-center ">
-          <LocalSwitcher />
-        </div>
+        <NavComponent />
+        <LocalSwitcher />
       </div>
-      <NavComponent />
     </header>
   );
 };

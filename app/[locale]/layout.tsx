@@ -34,8 +34,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <div className="flex flex-col min-h-screen max-w-full mx-auto">
             <Header />
-            <div className="flex flex-grow  justify-center w-full m-auto ">
-              {" "}
+            <div className="flex flex-grow  justify-center w-full m-auto bg-back-beige">
               {children}
             </div>
             <Footer />

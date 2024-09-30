@@ -12,28 +12,27 @@ type BidderItemsProps = {
 const BidderItems: React.FC<BidderItemsProps> = ({ items }) => {
   const locale = useLocale();
   return (
-    <div>
-      <p>Your Items:</p>
+    <div className="w-full flex flex-col gap-4">
       {items.length > 0 ? (
-        items.map((item: BidderItem, index: number) => (
-          <div key={index}>
-            <div className="flex gap-2 mb-2">
-              <span>{index + 1}</span>
-              <span className="">{item.catalogNumber}</span>
-              <span>
-                {" "}
-                {locale === "de"
-                  ? item.headerDE
-                  : item.headerEN
-                  ? item.headerEN
-                  : item.headerDE}
-              </span>
+        <>
+          <p className="font-semibold ">Your Items ({items.length})</p>
+          {items.map((item: BidderItem, index: number) => (
+            <div key={index}>
+              <div className="w-full flex gap-4 justify-between border border-sky-blue rounded p-4 text-sm">
+                <span className="font-semibold">{item.catalogNumber}</span>
+                <span>
+                  {locale === "de"
+                    ? item.headerDE
+                    : item.headerEN
+                    ? item.headerEN
+                    : item.headerDE}
+                </span>
 
-              <span>€ {item.price}</span>
-              <span>{item.canBeShipped ? "Yes" : "No"}</span>
+                <span>€ {item.price}</span>
+              </div>
             </div>
-          </div>
-        ))
+          ))}
+        </>
       ) : (
         <p>No items found.</p>
       )}

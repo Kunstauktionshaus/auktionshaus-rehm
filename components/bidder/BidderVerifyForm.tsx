@@ -43,81 +43,77 @@ const BidderVerifyForm = () => {
             },
           },
         );
+        const result = await response.json();
 
-        if (response.ok) {
-          const result = await response.json();
-          setSuccessMessage(result.message || "Bidder found!");
+        if (result.status === 200) {
+          setSuccessMessage(t("responseSuccess"));
           router.push("dashboard");
-        } else {
-          const result = await response.json();
-          setError(result.error || "An error occurred.");
+        } else if (result.status === 404) {
+          setError(t("responseError"));
+        } else if (result.status === 500) {
+          setError(t("serverError"));
         }
       } catch (error: any) {
+        setError(t("serverError"));
         console.error(error);
       }
     });
   };
 
   return (
-    <div className="mt-6 mx-auto w-full max-w-md p-4  font-display">
-      {error && <p className="text-red-500">{error}</p>}
-      {successMessage && <p className="text-green-500">{successMessage}</p>}
-      <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <label
-            className="block text-grafit text-sm font-bold mb-1"
-            htmlFor="auctionNumber"
-          >
+    <div className="w-full max-w-md mx-auto mt-16 p-4 font-montserrat">
+      <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
+        <div className="flex flex-col gap-2">
+          <label className="" htmlFor="auctionNumber">
             {t("auctionNumber")}
           </label>
           <input
             {...register("A")}
             defaultValue={auctionNumber ?? ""}
             type="string"
-            className="w-full border-b border-gray-500 focus:border-green-500 outline-none text-gray-500 p-2"
+            className="w-full border border-sky-blue rounded bg-sky-blue-back p-2 focus:outline-teal focus:shadow-outline"
           />
-          {errors.A && <span className="text-red-500">{errors.A.message}</span>}
+          {errors.A && (
+            <span className="text-xs text-red-500"> {t("numberError")}</span>
+          )}
         </div>
-        <div>
-          <label
-            className="block text-grafit text-sm font-bold mb-1"
-            htmlFor="bidderNumber"
-          >
+        <div className="flex flex-col gap-2">
+          <label className="" htmlFor="bidderNumber">
             {t("bidderNumber")}
           </label>
           <input
             {...register("B")}
             defaultValue={bidderNumber ?? ""}
             type="string"
-            className="w-full border-b border-gray-500 focus:border-green-500 outline-none text-gray-500 p-2"
+            className="w-full border border-sky-blue rounded bg-sky-blue-back p-2 focus:outline-teal focus:shadow-outline"
           />
-          {errors.B && <span className="text-red-500">{errors.B.message}</span>}
+          {errors.B && (
+            <span className="text-xs text-red-500"> {t("numberError")}</span>
+          )}
         </div>
-        <div>
-          <label
-            className="block text-grafit text-sm font-bold mb-1"
-            htmlFor="email"
-          >
-            {t("email")}
-          </label>
+        <div className="flex flex-col gap-2">
+          <label className="">{t("email")}</label>
           <input
             {...register("E")}
             type="email"
-            className="w-full border-b border-gray-500 focus:border-green-500 outline-none text-gray-500 p-2"
+            className="w-full border border-sky-blue rounded bg-sky-blue-back p-2 focus:outline-teal focus:shadow-outline"
           />
-          {errors.E && <span className="text-red-500">{errors.E.message}</span>}
+          {errors.E && (
+            <span className="text-xs text-red-500"> {t("emailError")}</span>
+          )}
         </div>
         <div className="text-center">
           <button
             disabled={isPending}
             type="submit"
-            className="border-b-2 border-gray-500 text-gray-500
-                hover:border-b-2 hover:border-green-500
-                transition-border duration-300 ease-in-out
-                hover:text-green-500  py-2 px-6 focus:outline-none focus:shadow-outline disabled:bg-gray-300 disabled:cursor-not-allowed"
+            className=" mt-4 px-8 py-4 text-white bg-teal uppercase rounded disabled:bg-gray-300 disabled:cursor-not-allowed"
           >
             {t("submit")}
           </button>
+          {error && <p className="mt-4 text-red-500">{error}</p>}
+          {successMessage && (
+            <p className="mt-4 text-green-500">{successMessage}</p>
+          )}
         </div>
       </form>
     </div>
