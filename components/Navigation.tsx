@@ -14,7 +14,8 @@ const NavComponent = () => {
     <div className="bg-beige p-4 shadow-md font-lato">
       <nav className="flex justify-center space-x-6 text-grafit max-w-screen-xl m-auto">
         <Link
-          href={`/${locale}/house`}
+          href={"#"}
+          // href={`/${locale}/house`}
           className={
             currentPath === `/${locale}/house`
               ? "text-rose uppercase"
@@ -24,7 +25,8 @@ const NavComponent = () => {
           {t("home")}
         </Link>
         <Link
-          href={`/${locale}/auctions`}
+          href={"#"}
+          // href={`/${locale}/auctions`}
           className={
             currentPath === `/${locale}/auctions`
               ? "text-rose font-semibold uppercase"
@@ -34,7 +36,8 @@ const NavComponent = () => {
           {t("auctions")}
         </Link>
         <Link
-          href={`/${locale}/contacts`}
+          href={"#"}
+          // href={`/${locale}/contacts`}
           className={
             currentPath === `/${locale}/contacts`
               ? "text-rose font-semibold uppercase"
