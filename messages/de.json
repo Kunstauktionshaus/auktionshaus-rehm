@@ -20,8 +20,8 @@
   "Header": {
     "search": "Suchen",
     "contacts": "Kontakte",
-    "home": "Home",
-    "auctions": "Auktionen"
+    "team": "Team",
+    "partners": "Partner"
   },
   "Invoice": {
     "invoice": "Rechnung",
@@ -39,24 +39,37 @@
   },
 
   "ShippingForm": {
-    "chooseMethod": "Liefermethode wählen",
+    "shippingWarning1": "Achtung: Nicht alle Objekte Ihres Einkaufs können vom Auktionshaus verschickt werden!",
+    "shippingWarning2": "Bitte wählen Sie ein Abholdatum für die Artikel, die nicht geliefert werden können.",
+    "chooseMethod": "Bitte wählen Sie eine Methode",
     "shipping": "Versand",
     "pickup": "Abholung",
     "mailboxes": "Mail Boxes Etc.",
-    "address": "Adresse:",
-    "postalCode": "PLZ:",
-    "city": "Stadt:",
-    "country": "Land:",
+    "address": "Adresse",
+    "postalCode": "PLZ",
+    "city": "Stadt",
+    "country": "Land",
     "placeholderAddress": "Straße, Hausnummer, Wohnung",
     "placeholderPostalCode": "Postleitzahl",
     "placeholderCity": "Stadt",
-    "selectCountry": "Land wählen:",
+    "selectCountry": "Land wählen",
     "searchCountry": "Land suchen",
-    "pickupDate": "Abholdatum:",
-    "pickupInfo": "Abholinformationen (optional):",
+    "pickupDate": "Abholdatum",
+    "pickupInfo": "Abholinformationen (optional)",
     "placeholderPickupDate": "TT/MM/JJJJ",
     "placeholderPickupInfo": "Zusätzliche Abholinformationen eingeben",
-    "comments": "Kommentare (optional):",
-    "map": "Sie können Ihre Waren an folgender Adresse abholen:"
+    "comments": "Kommentare (optional)",
+    "map": "Sie können Ihre Waren an folgender Adresse abholen",
+    "submit": "Senden",
+    "loading": "Lädt..."
+  },
+  "AboutPage": {
+    "teamSubtitle": "Unser Team",
+    "teamTitle": "Lernen Sie unser Team kennen",
+    "teamDescription": "Mit Expertise in verschiedenen Auktionskategorien, darunter Uhren, Glas und Keramiken, ist unser Team leidenschaftlich darum bemüht, außergewöhnlichen Service und präzise Bewertungen zu bieten",
+    "about": "Über uns",
+    "partnersSubtitle": "Unsere Partner",
+    "partnersTitle": "Lernen Sie unsere Partner kennen",
+    "partnersDescription": "Das Auktionshaus Rehm kooperiert mit folgenden Firmen und Institutionen"
   }
 }

@@ -1,6 +1,7 @@
+import { SessionObjectValues } from "@schemas/zod";
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 const secretKey = process.env.SESSION_SECRET;
 const key = new TextEncoder().encode(secretKey);
@@ -20,7 +21,7 @@ export async function decrypt(input: string): Promise<any> {
   return payload;
 }
 
-export async function createSession(bidderData: any) {
+export async function createSession(bidderData: SessionObjectValues) {
   const expires = new Date(Date.now() + 24 * 60 * 60 * 100);
   const session = await encrypt({ bidderData, expires });
 
@@ -45,7 +46,18 @@ export async function getSession() {
   }
 }
 
-export async function updateSession(request: NextRequest) {
-  const session = request.cookies.get("session")?.value;
-  if (!session) return;
+export async function updateSession(newMethod: number) {
+  const currentSession = await getSession();
+  if (!currentSession) {
+    return NextResponse.json({ status: 404, message: "Session not found" });
+  }
+
+  const updatedSession = {
+    ...currentSession.bidderData,
+    method: newMethod,
+  };
+
+  await createSession(updatedSession);
+
+  return NextResponse.json({ status: 200, message: "Session updated" });
 }

@@ -20,8 +20,8 @@
   "Header": {
     "search": "Search",
     "contacts": "Contacts",
-    "home": "Home",
-    "auctions": "Auctions"
+    "team": "Team",
+    "partners": "Partners"
   },
   "Invoice": {
     "invoice": "Invoice",
@@ -38,24 +38,40 @@
     "auctionHouse": "Your Kunstauktionshaus Georg Rehm"
   },
   "ShippingForm": {
-    "chooseMethod": "Choose Delivery Method",
+    "shippingWarning1": "Warning: Some of your purchased items cannot be shipped by the auction house!",
+    "shippingWarning2": "Please select a pickup date for the items that cannot be delivered.",
+    "chooseMethod": "Please choose a method",
     "shipping": "Shipping",
     "pickup": "Pick up",
     "mailboxes": "Mail Boxes Etc.",
-    "address": "Address:",
-    "postalCode": "Postal code:",
-    "city": "City:",
-    "country": "Country:",
+    "address": "Address",
+    "postalCode": "Postal code",
+    "city": "City",
+    "country": "Country",
     "placeholderAddress": "Street, house number, apartment",
     "placeholderPostalCode": "Postal code",
     "placeholderCity": "City",
-    "selectCountry": "Select country:",
+    "selectCountry": "Select country",
     "searchCountry": "Search country",
-    "pickupDate": "Pickup date:",
-    "pickupInfo": "Pickup info (optional):",
+    "pickupDate": "Pickup date",
+    "pickupInfo": "Pickup info (optional)",
     "placeholderPickupDate": "MM/DD/YYYY",
     "placeholderPickupInfo": "Enter additional pickup information",
-    "comments": "Comments (optional):",
-    "map": "You can pick up your items at the following address:"
-  }
+    "comments": "Comments (optional)",
+    "map": "You can pick up your items at the following address",
+    "submit": "Submit",
+    "loading": "Loading..."
+  },
+  "AboutPage": {
+    "teamSubtitle": "Our Team",
+    "teamTitle": "Meet Our Team",
+    "teamDescription": "With expertise in various auction categories, including clocks, glass, and ceramics, our team is passionate about delivering exceptional service and precise evaluations",
+    "about": "About",
+    "partnersSubtitle": "Our Partners",
+    "partnersTitle": "Meet Our Partners",
+    "partnersDescription": "Auctionhouse Rehm is cooperating with following companies & associations"
+  },
+
+  "AGB_Bidders": {},
+  "AGB_consigners": {}
 }

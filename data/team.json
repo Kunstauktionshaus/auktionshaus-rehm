@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "name": "Christoph Neureuther",
+    "position": {
+      "en": "Managing Partner",
+      "de": "Geschäftsführender Gesellschafter"
+    },
+    "expertise": {
+      "en": "Publically Appointed and Certified Auctioneer",
+      "de": "Öffentlich bestellter und vereidigter Auktionator"
+    },
+    "photo": "christophneureuther.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Georg Rehm",
+    "position": {
+      "en": "Publically Appointed and Certified Auctioneer",
+      "de": "Öffentlich bestellter und vereidigter Auktionator"
+    },
+    "expertise": {
+      "en": "Publically Appointed and Certified Expert",
+      "de": "Öffentlich bestellter und vereidigter Sachverständiger"
+    },
+    "photo": "rehmgeorg.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Bertil Zadick",
+    "position": {
+      "en": "Contact for Nordrhein-Westfalen and Rheinland-Pfalz",
+      "de": "Ansprechpartner für Einlieferer in Nordrhein-Westfalen und Rheinland-Pfalz"
+    },
+    "expertise": {
+      "en": "Art Expert, Auctioneer",
+      "de": "Diamantgutachter und Kunstsachverständiger, Auktionator"
+    },
+    "photo": "zadickbertil.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Juan Uribe Saavedra M.A.",
+    "position": {
+      "en": "Ph.D. Candidate on the Topic «History of Contemporary Material Culture» ",
+      "de": "Ph.D. Doktorand zum Thema «History of Contemporary Material Culture»"
+    },
+    "expertise": {
+      "en": "Design, Interior Decorations, 20th Century",
+      "de": "Design, Einrichtung, 20. Jahrhundert"
+    },
+    "photo": "juanuribesaavedra.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Anja Schuster M.A.",
+    "position": {
+      "en": "Art Historian",
+      "de": "Kunsthistorikerin"
+    },
+    "expertise": {
+      "en": "Paintings, Graphics",
+      "de": "Gemälde, Grafiken"
+    },
+    "photo": "anjaschuster.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Maxx Glavač B.A.",
+    "position": {
+      "en": "Art Historian",
+      "de": "Kunsthistoriker"
+    },
+    "expertise": {
+      "en": "IT & Technical Support",
+      "de": "IT & Technische Betreuung"
+    },
+    "photo": "maxxglavac.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Katharina Former",
+    "position": {
+      "en": "Customer Service for Purchase and Consignment",
+      "de": "Kunden & Einliefererkontakt"
+    },
+    "expertise": {
+      "en": "Goldsmith",
+      "de": "Verkauf, Goldschmiedin"
+    },
+    "photo": "katharinaformer.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Dominic Lutz",
+    "position": {
+      "en": "Customer Service for Purchase and Consignment",
+      "de": "Kunden & Einliefererkontakt"
+    },
+    "expertise": {
+      "en": "Photography",
+      "de": "Fotographie"
+    },
+    "photo": "lutzdominic.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Angjelina Krasniqi",
+    "position": {
+      "en": "Customer Service for Purchase and Consignment",
+      "de": "Kunden & Einliefererkontakt"
+    },
+    "expertise": {
+      "en": "Social Media",
+      "de": "Social Media"
+    },
+    "photo": "angjelinakrasniqi.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Michaela Schefenacker",
+    "position": {
+      "en": "Finance and Accounting",
+      "de": "Finanzen und Buchhaltung"
+    },
+    "expertise": {
+      "en": "Freelancer",
+      "de": "Freie Mitarbeiterin"
+    },
+    "photo": "schefenackermichaela.jpg"
+  }
+]

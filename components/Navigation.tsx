@@ -14,33 +14,30 @@ const NavComponent = () => {
     <div className="w-full">
       <nav className="flex justify-center space-x-6 text-black font-semibold uppercase max-w-screen-xl m-auto">
         <Link
-          href={"#"}
-          // href={`/${locale}/house`}
+          href={`/${locale}/team`}
           className={
-            currentPath === `/${locale}/house`
-              ? "text-teal"
+            currentPath === `/${locale}/team`
+              ? "text-teal border-b-2 border-teal"
               : "hover:text-teal transition-colors"
           }
         >
-          {t("home")}
+          {t("team")}
         </Link>
         <Link
-          href={"#"}
-          // href={`/${locale}/auctions`}
+          href={`/${locale}/partners`}
           className={
-            currentPath === `/${locale}/auctions`
-              ? "text-teal"
+            currentPath === `/${locale}/partners`
+              ? "text-teal border-b-2 border-teal"
               : "hover:text-teal transition-colors "
           }
         >
-          {t("auctions")}
+          {t("partners")}
         </Link>
         <Link
-          href={"#"}
-          // href={`/${locale}/contacts`}
+          href={`/${locale}/contacts`}
           className={
             currentPath === `/${locale}/contacts`
-              ? "text-teal"
+              ? "text-teal border-b-2 border-teal"
               : "hover:text-teal transition-colors "
           }
         >

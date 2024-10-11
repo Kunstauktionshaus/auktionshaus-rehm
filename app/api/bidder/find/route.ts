@@ -3,17 +3,17 @@ import axios from "axios";
 import { createSession } from "@session";
 import {
   BidderFiltersSchema,
+  BidderItem,
   BidderItemsArraySchema,
-  BidderItemsSchema,
+  BidderFiltersValues,
   ObjectsFiltersSchema,
   SessionObjectSchema,
-} from "@schemas";
-import { z } from "zod";
+  ObjectsFiltersValues,
+} from "@schemas/zod";
 
 const URL = process.env.BIDDERS_TABLE_LINK_GR as string;
-const OBJECTS_URL = process.env.OBJECTS_TABLE_LINK_GR as string;
 
-type BidderItem = z.infer<typeof BidderItemsSchema>;
+const OBJECTS_URL = process.env.OBJECTS_TABLE_LINK_GR as string;
 
 export async function GET(req: NextRequest) {
   try {
@@ -35,7 +35,7 @@ export async function GET(req: NextRequest) {
       const objects = await getObjects(objectsFilters);
 
       const filteredObjects = BidderItemsArraySchema.parse(
-        objects.map(
+        (objects || []).map(
           (item: {
             _id: number;
             I: number;
@@ -46,7 +46,7 @@ export async function GET(req: NextRequest) {
           }) => ({
             id: item._id,
             catalogNumber: item.I,
-            headerDE: item.D,
+            headerDE: item.D || "",
             headerEN: item.Y3,
             price: item.C3,
             canBeShipped: item.E3,
@@ -59,19 +59,19 @@ export async function GET(req: NextRequest) {
       if (bidder[0].P1) {
         shippingCase = 3;
       } else {
-        const allShippable = filteredObjects.every(
-          (item: BidderItem) => item.canBeShipped,
+        const allShippable = filteredObjects?.every(
+          (item: BidderItem) => item?.canBeShipped,
         );
         shippingCase = allShippable ? 1 : 2;
       }
 
       const objectToSave = SessionObjectSchema.parse({
         id: bidder[0]._id,
+        method: bidder[0].N || 0,
         auctionNumber: bidder[0].A,
         bidderNumber: bidder[0].B,
         name: bidder[0].C,
         surname: bidder[0].D,
-        email: bidder[0].E,
         notEU: bidder[0].P1,
         shippingCase: shippingCase,
         priceForShipping: bidder[0].O,
@@ -90,11 +90,12 @@ export async function GET(req: NextRequest) {
   } catch (error: any) {
     return NextResponse.json({
       status: 500,
+      error,
     });
   }
 }
 
-async function getBidder(filters: any) {
+async function getBidder(filters: BidderFiltersValues) {
   const response = await axios.get(URL, {
     headers: {
       Authorization: `Bearer ${process.env.API_KEY}`,
@@ -107,7 +108,7 @@ async function getBidder(filters: any) {
   return response.data;
 }
 
-async function getObjects(objectsFilters: any) {
+async function getObjects(objectsFilters: ObjectsFiltersValues) {
   const response = await axios.get(OBJECTS_URL, {
     headers: {
       Authorization: `Bearer ${process.env.API_KEY}`,

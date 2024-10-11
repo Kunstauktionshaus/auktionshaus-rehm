@@ -2,13 +2,10 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { BidderFiltersSchema } from "@schemas";
-import { z } from "zod";
+import { BidderFiltersSchema, BidderFiltersValues } from "@schemas/zod";
 import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useTransition } from "react";
-
-type BidderVerifyFormValues = z.infer<typeof BidderFiltersSchema>;
 
 const BidderVerifyForm = () => {
   const router = useRouter();
@@ -25,11 +22,11 @@ const BidderVerifyForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<BidderVerifyFormValues>({
+  } = useForm<BidderFiltersValues>({
     resolver: zodResolver(BidderFiltersSchema),
   });
 
-  const onSubmit = async (data: BidderVerifyFormValues) => {
+  const onSubmit = async (data: BidderFiltersValues) => {
     setError(null);
     setSuccessMessage(null);
     startTransition(async () => {
@@ -108,7 +105,7 @@ const BidderVerifyForm = () => {
             type="submit"
             className=" mt-4 px-8 py-4 text-white bg-teal uppercase rounded disabled:bg-gray-300 disabled:cursor-not-allowed"
           >
-            {t("submit")}
+            {isPending ? t("loading") : t("submit")}
           </button>
           {error && <p className="mt-4 text-red-500">{error}</p>}
           {successMessage && (

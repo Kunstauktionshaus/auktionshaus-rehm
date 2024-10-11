@@ -1,0 +1,59 @@
+[
+  {
+    "name": "Petzold KG - Pfandversteigerungen und Industrieauktionen",
+    "contact": {
+      "name": "Christoph Neureuther",
+      "address1": "Schillerstraße 82",
+      "address2": "88616 Augsburg",
+      "phone": "+49 (821) 33715",
+      "email": "neureuther@petzold-auktionen.de"
+    },
+    "link": "https://www.petzold-auktionen.de/home"
+  },
+  {
+    "name": "Bayerischer Versteigerer Verband München e.V.",
+    "contact": {
+      "phone": "+49 (931) 414477",
+      "fax": "+49 (0931) 412626"
+    },
+    "link": "https://www.versteigererverband.de/"
+  },
+  {
+    "name": "Landshuter Rüstkammer GmbH & Co KG",
+    "contact": {
+      "address1": "Fischergasse 660",
+      "address2": "84028 Landshut",
+      "phone": "+49 (871) 4308740",
+      "fax": "+49 (871) 4308739"
+    },
+    "link": "https://www.landshuter-ruestkammer.de/"
+  },
+  {
+    "name": "Bund der Hausratexperten Bonn e.V.",
+    "contact": {
+      "address1": "Marktstraße 15",
+      "address2": "25436 Uetersen",
+      "phone": "+49 (2205) 1362"
+    },
+    "link": "https://xn--hausrat-sachverstndige-h5b.de/"
+  },
+  {
+    "name": "Transport Fritz Hendrich GmbH & Co. KG",
+    "contact": {
+      "address1": "Am Mittleren Moos 28",
+      "address2": "86167 Augsburg",
+      "phone": "+49 (821) 4555540",
+      "fax": "+49 (821) 45555429"
+    },
+    "link": "https://www.transport-hendrich.de/"
+  },
+  {
+    "name": "Faschingsgesellschaft Hollaria Augsburg e.V.",
+    "contact": {
+      "address1": "Donauwörther Straße 42",
+      "address2": "86368 Gersthofen",
+      "fax": "+49 (821) 556758"
+    },
+    "link": "https://www.hollaria.de/"
+  }
+]

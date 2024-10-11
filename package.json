@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fileforge/react-print": "^0.1.150",
     "@hookform/resolvers": "^3.9.0",
     "@types/i18next": "^13.0.0",
     "axios": "^1.7.7",
