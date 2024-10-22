@@ -3,7 +3,7 @@ import teamData from "@data/team.json";
 import Image from "next/image";
 
 const TeamPage = () => {
-  const t = useTranslations("AboutPage");
+  const t = useTranslations("TeamPage");
   const locale = useLocale();
   return (
     <div className="w-full max-w-screen-xl mx-auto">
@@ -20,17 +20,18 @@ const TeamPage = () => {
 
         <div className="w-full flex flex-wrap gap-10 justify-center">
           {teamData.map(async (member, index) => {
-            const img = await import(
+            const imgSrc = await import(
               `@public/assets/images/team/${member.photo}`
             );
+
             return (
               <div
                 key={member.id}
-                className="w-[300px] h-full relative bg-white shadow-lg  flex flex-col justify-center items-center transition-transform transform hover:scale-105"
+                className="w-[300px] h-full relative shadow-lg  flex flex-col justify-center items-center transition-transform transform hover:scale-105"
               >
                 <div className="w-[300px] h-[300px] relative overflow-hidden">
                   <Image
-                    src={img}
+                    src={imgSrc}
                     alt={member.name}
                     quality={100}
                     className="w-[300px] h-auto"

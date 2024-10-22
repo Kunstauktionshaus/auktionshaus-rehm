@@ -12,6 +12,41 @@
     "responseError": "Bieter wurde nicht gefunden.",
     "serverError": "Serverfehler. Bitte versuchen Sie es später erneut."
   },
+  "Auth": {
+    "name": "Vorname",
+    "surname": "Nachname",
+    "birthday": "Geburtsdatum",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "createPassword": "Passwort erstellen",
+    "address": "Adresse",
+    "postalCode": "Postleitzahl",
+    "city": "Stadt",
+    "country": "Land",
+    "iHaveRead": "Ich habe die",
+    "terms": "Allgemeinen Geschäftsbedingungen (AGB)",
+    "privacyPolicy": " Datenschutzerklärung",
+    "agreeTerms": "gelesen und stimme zu",
+    "agreePrivacyPolicy": "gelesen und stimme der Verarbeitung meiner personenbezogenen Daten zu",
+    "company": "Firma",
+    "iban": "IBAN",
+    "privateUser": "Privatperson",
+    "required": "Dieses Feld ist erforderlich",
+    "emailError": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "passwordError": "Das Passwort muss mindestens 6 Zeichen lang sein",
+    "confirmPasswordError": "Passwörter stimmen nicht überein",
+    "noAccount": "Sie haben noch kein Benutzerkonto eingerichtet?",
+    "haveAccount": "Haben Sie bereits ein Benutzerkonto?",
+    "clickHere": "Klicken Sie hier",
+    "useCode": "Ich habe einen Code zum Anmelden",
+    "code": "Code",
+    "loginButton": "Anmelden",
+    "registerButton": "Registrieren",
+    "selectCountry": "Land wählen",
+    "searchCountry": "Land suchen"
+  },
   "Not-Found": {
     "title": "Seite nicht gefunden",
     "text": "Entschuldigung, wir konnten die Seite, nach der Sie suchen, nicht finden.",
@@ -19,9 +54,10 @@
   },
   "Header": {
     "search": "Suchen",
-    "contacts": "Kontakte",
+    "info": "Informationen",
     "team": "Team",
-    "partners": "Partner"
+    "partners": "Partner",
+    "terms": "AGB"
   },
   "Invoice": {
     "invoice": "Rechnung",
@@ -61,15 +97,30 @@
     "comments": "Kommentare (optional)",
     "map": "Sie können Ihre Waren an folgender Adresse abholen",
     "submit": "Senden",
-    "loading": "Lädt..."
+    "loading": "Lädt...",
+    "shippingConditions": "Hier erhalten Sie Informationen über unsere Versandbedingungen."
   },
-  "AboutPage": {
-    "teamSubtitle": "Unser Team",
-    "teamTitle": "Lernen Sie unser Team kennen",
-    "teamDescription": "Mit Expertise in verschiedenen Auktionskategorien, darunter Uhren, Glas und Keramiken, ist unser Team leidenschaftlich darum bemüht, außergewöhnlichen Service und präzise Bewertungen zu bieten",
-    "about": "Über uns",
+  "PartnersPage": {
     "partnersSubtitle": "Unsere Partner",
     "partnersTitle": "Lernen Sie unsere Partner kennen",
     "partnersDescription": "Das Auktionshaus Rehm kooperiert mit folgenden Firmen und Institutionen"
-  }
+  },
+  "TeamPage": {
+    "teamSubtitle": "Unser Team",
+    "teamTitle": "Lernen Sie unser Team kennen",
+    "teamDescription": "Mit Expertise in verschiedenen Auktionskategorien, darunter Uhren, Glas und Keramiken, ist unser Team leidenschaftlich darum bemüht, außergewöhnlichen Service und präzise Bewertungen zu bieten"
+  },
+
+  "TermsPage": {
+    "subTitle": "Allgemeine Geschäftsbedingungen der",
+    "title": "Augsburger Kunstauktionshaus Rehm GmbH",
+    "description": "Versteigerungsauftrag und detaillierte Bedingungen zur Durchführung der Auktionen, einschließlich der Rechte und Pflichten der Bieter, der Einlieferer sowie des Versteigerers, Regelungen zur Abwicklung des Auktionsprozesses, der Zahlungsmodalitäten und der Gewährleistung."
+  },
+  "TermsBidders": {
+    "title": "Bedingungen für Bieter"
+  },
+  "TermsConsigners": {
+    "title": "Bedingungen für Einlieferer"
+  },
+  "ZodErrors": {}
 }

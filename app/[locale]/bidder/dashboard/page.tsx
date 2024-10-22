@@ -43,35 +43,11 @@ const Dashboard = async () => {
           </>
         )}
       </div>
-
-      <div className="w-full ">
-        {(bidderData.method === 0 || bidderData.method === 3) && (
-          <BidderDeliveryForm
-            bidderID={bidderData.id}
-            shippingCase={bidderData.shippingCase}
-          />
-        )}
-        {bidderData.method === 2 && (
-          <div className="font-montserrat px-4 py-20 text-center">
-            You selected shipping method. Your shipment is currently being
-            processed, and you will receive an email with updates.
-          </div>
-        )}
-
-        {bidderData.method === 1 && (
-          <p>
-            You selected pickup method on DATE. You have chosen to pick up items
-            from the auction house. We look forward to seeing you!
-          </p>
-        )}
-
-        {bidderData.method === 4 && (
-          <p>
-            You selected contact mailboxes method. Your request is being
-            processed, and someone will get in touch with you shortly.
-          </p>
-        )}
-      </div>
+      <BidderDeliveryForm
+        bidderID={bidderData.id}
+        method={bidderData.method}
+        shippingCase={bidderData.shippingCase}
+      />
     </div>
   );
 };

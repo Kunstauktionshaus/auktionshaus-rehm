@@ -12,6 +12,42 @@
     "responseError": "Bidder not found.",
     "serverError": "Server error. Please try again later."
   },
+
+  "Auth": {
+    "name": "Name",
+    "surname": "Surname",
+    "birthday": "Birthday",
+    "email": "Email",
+    "phone": "Phone",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "createPassword": "Create passwors",
+    "address": "Address",
+    "postalCode": "Postal code",
+    "city": "City",
+    "country": "Country",
+    "iHaveRead": "I have read the",
+    "terms": "Terms and Conditions",
+    "privacyPolicy": "Privacy Policy",
+    "agreeTerms": "and I agree to the terms",
+    "agreePrivacyPolicy": "and I agree to the processing of my personal data",
+    "company": "Company",
+    "iban": "IBAN",
+    "privateUser": "Private User",
+    "required": "This field is required",
+    "emailError": "Please enter a valid email address",
+    "passwordError": "Password must be at least 6 characters long",
+    "confirmPasswordError": "Passwords do not match",
+    "noAccount": "You haven't created an account yet?",
+    "haveAccount": "Do you already have an account?",
+    "clickHere": "Click here",
+    "useCode": "I have a code to log in",
+    "code": "Code",
+    "loginButton": "Login",
+    "registerButton": "Register",
+    "selectCountry": "Select country",
+    "searchCountry": "Search country"
+  },
   "Not-Found": {
     "title": "Page not found",
     "text": "Sorry, we couldn’t find the page you’re looking for.",
@@ -19,9 +55,10 @@
   },
   "Header": {
     "search": "Search",
-    "contacts": "Contacts",
+    "info": "Info",
     "team": "Team",
-    "partners": "Partners"
+    "partners": "Partners",
+    "terms": "Terms"
   },
   "Invoice": {
     "invoice": "Invoice",
@@ -60,18 +97,31 @@
     "comments": "Comments (optional)",
     "map": "You can pick up your items at the following address",
     "submit": "Submit",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "shippingConditions": " Here you can get informations about our dispatch conditions."
   },
-  "AboutPage": {
-    "teamSubtitle": "Our Team",
-    "teamTitle": "Meet Our Team",
-    "teamDescription": "With expertise in various auction categories, including clocks, glass, and ceramics, our team is passionate about delivering exceptional service and precise evaluations",
-    "about": "About",
+  "PartnersPage": {
     "partnersSubtitle": "Our Partners",
     "partnersTitle": "Meet Our Partners",
     "partnersDescription": "Auctionhouse Rehm is cooperating with following companies & associations"
   },
 
-  "AGB_Bidders": {},
-  "AGB_consigners": {}
+  "TeamPage": {
+    "teamSubtitle": "Our Team",
+    "teamTitle": "Meet Our Team",
+    "teamDescription": "With expertise in various auction categories, including clocks, glass, and ceramics, our team is passionate about delivering exceptional service and precise evaluations"
+  },
+  "TermsPage": {
+    "subTitle": "General Terms and Conditions of",
+    "title": "Augsburger Kunstauktionshaus Rehm GmbH",
+    "description": "Auction order and detailed terms for conducting auctions, including the rights and obligations of bidders, consignors, and the auctioneer, as well as regulations regarding the auction process, payment terms, and warranties."
+  },
+  "TermsBidders": {
+    "title": "Auction conditions for bidders"
+  },
+  "TermsConsigners": {
+    "title": "Auction conditions for consignors"
+  },
+
+  "ZodErrors": {}
 }

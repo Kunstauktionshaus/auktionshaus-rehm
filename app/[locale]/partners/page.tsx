@@ -5,7 +5,7 @@ import PartnerIcon from "@public/assets/icons/partner.png";
 import Image from "next/image";
 
 const PartnersPage = () => {
-  const t = useTranslations("AboutPage");
+  const t = useTranslations("PartnersPage");
   return (
     <div className="w-full max-w-screen-xl mx-auto">
       <div className="container mx-auto p-10 flex flex-col gap-10 items-center">

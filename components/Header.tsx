@@ -1,15 +1,17 @@
+import AuthButtonsContainer from "./AuthButtonsContainer";
 import LocalSwitcher from "./Locale-Switcher";
 import Logo from "./Logo";
 import NavComponent from "./Navigation";
 
 const Header = () => {
   return (
-    <header className="w-full bg-white font-montserrat p-4">
-      <div className="flex justify-between items-center">
+    <header className="w-full bg-white font-montserrat">
+      <div className="max-w-screen-2xl mx-auto flex justify-between items-center p-4">
         <Logo />
-        <NavComponent />
         <LocalSwitcher />
+        <AuthButtonsContainer />
       </div>
+      <NavComponent />
     </header>
   );
 };

@@ -11,7 +11,7 @@ const NavComponent = () => {
   const t = useTranslations("Header");
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-back-beige p-4">
       <nav className="flex justify-center space-x-6 text-black font-semibold uppercase max-w-screen-xl m-auto">
         <Link
           href={`/${locale}/team`}
@@ -34,14 +34,24 @@ const NavComponent = () => {
           {t("partners")}
         </Link>
         <Link
-          href={`/${locale}/contacts`}
+          href={`/${locale}/info`}
           className={
-            currentPath === `/${locale}/contacts`
+            currentPath === `/${locale}/info`
               ? "text-teal border-b-2 border-teal"
               : "hover:text-teal transition-colors "
           }
         >
-          {t("contacts")}
+          {t("info")}
+        </Link>
+        <Link
+          href={`/${locale}/terms`}
+          className={
+            currentPath === `/${locale}/terms`
+              ? "text-teal border-b-2 border-teal"
+              : "hover:text-teal transition-colors "
+          }
+        >
+          {t("terms")}
         </Link>
       </nav>
     </div>
