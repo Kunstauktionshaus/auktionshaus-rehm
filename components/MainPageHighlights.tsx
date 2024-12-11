@@ -8,7 +8,7 @@ import auctionData from "@data/auctions.json";
 const Highlights = async () => {
   const currentAuction = auctionData.current.number;
   const data = await fetch(
-    `http://localhost:3000/api/auction/${currentAuction}/highlight`,
+    `${process.env.NEXT_PUBLIC_API_URL}/api/auction/${currentAuction}/highlight`,
     {
       method: "GET",
       headers: {

@@ -35,10 +35,6 @@ const AuthButtonsContainer = () => {
             <button
               onClick={() => signOut({ callbackUrl: "/", redirect: true })}
             >
-              {/* <FontAwesomeIcon
-                icon={faRightFromBracket}
-                className="text-2xl text-navy"
-              /> */}
               Sign Out
             </button>
           </div>

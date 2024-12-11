@@ -34,15 +34,15 @@ module.exports = {
         maroon: "#895159",
         peach: "#dfaea1",
 
-        amber: "#F5A623", // Тёплый янтарный
-        honey: "#D9A066", // Медовый
-        terracotta: "#E2725B", // Терракотовый
-        sand: "#E8D3C5", // Песочный
-        mustard: "#D6AE60", // Горчичный
-        coral: "#E87C66", // Коралловый
-        cinnamon: "#B56539", // Корица
-        blush: "#F2C1C4", // Нежно-розовый румянец
-        apricot: "#F4A384", // Абрикосовый
+        amber: "#F5A623",
+        honey: "#D9A066",
+        terracotta: "#E2725B",
+        sand: "#E8D3C5",
+        mustard: "#D6AE60",
+        coral: "#E87C66",
+        cinnamon: "#B56539",
+        blush: "#F2C1C4",
+        apricot: "#F4A384",
         latte: "#C5A897",
 
         cream: "#f8f5f0",
@@ -54,5 +54,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/line-clamp")],
+  plugins: [],
 };

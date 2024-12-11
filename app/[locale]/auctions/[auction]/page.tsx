@@ -9,12 +9,15 @@ const Auction = async ({ params }: { params: { auction: string } }) => {
   const isCurrentAuction = +auctionNr === currentAuction;
 
   if (isCurrentAuction) {
-    const data = await fetch(`http://localhost:3000/api/auction/${auctionNr}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
+    const data = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/auction/${auctionNr}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
       },
-    });
+    );
 
     const items: ObjectsArrayValues = (await data.json()) || [];
 

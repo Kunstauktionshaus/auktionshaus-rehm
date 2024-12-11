@@ -1,13 +1,12 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const VerifyForm = () => {
   const [loading, setLoading] = useState(false);
   const [verified, setVerified] = useState(false);
   const [isCodeResent, setIsCodeResent] = useState(false);
-  // const [email, setEmail] = useState<string | null>(null);
   const [verificationCode, setVerificationCode] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
 
@@ -15,13 +14,6 @@ const VerifyForm = () => {
   const email = searchParams.get("email");
   const redirect = searchParams.get("redirect") || "/";
   const router = useRouter();
-
-  // useEffect(() => {
-
-  //   if (emailParam) {
-  //     setEmail(emailParam);
-  //   }
-  // }, [searchParams]);
 
   const verifyEmail = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,7 +35,11 @@ const VerifyForm = () => {
       if (res.ok) {
         setVerified(true);
         setTimeout(() => {
-          router.push(`/login?redirect=${encodeURIComponent(redirect)}`);
+          router.push(
+            `${
+              process.env.NEXT_PUBLIC_API_URL
+            }/login?redirect=${encodeURIComponent(redirect)}`,
+          );
         }, 2000);
       } else {
         const data = await res.json();
@@ -60,13 +56,16 @@ const VerifyForm = () => {
     setIsCodeResent(false);
 
     try {
-      const res = await fetch("/api/auth/resend-verification", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/auth/resend-verification`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email }),
         },
-        body: JSON.stringify({ email }),
-      });
+      );
 
       if (res.ok) {
         setIsCodeResent(true);

@@ -18,7 +18,7 @@ const Foreword = () => {
           priority
         />
       </Link>
-      <div className="absolute bottom-4 left-4 z-50 flex flex-col gap-2 text-white text-5xl font-montserrat font-semibold">
+      <div className="absolute bottom-4 left-4 z-50 flex flex-col gap-2 text-white text-2xl md:text-3xl lg:text-5xl font-montserrat font-semibold">
         <p>{t("foreword")}</p>
         <p>Christoph</p>
         <p>Neureuther</p>

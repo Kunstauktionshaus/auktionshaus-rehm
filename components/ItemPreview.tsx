@@ -34,17 +34,6 @@ const ItemPreview: React.FC<ItemProps> = ({ item, searchKeyword }) => {
           <span>Start price: </span>
           <span>{formatPrice(item.catalogPrice)}</span>
         </div>
-        {/* {item.soldPrice ? (
-          <div className="w-full flex justify-between text-red text-lg font-semibold pt-2 border-t">
-            <span>Sold: </span>
-            <span>{formatPrice(item.soldPrice)}</span>
-          </div>
-        ) : (
-          <div className="w-full flex justify-between text-lg text-navy font-semibold pt-2 border-t">
-            <span>Available for: </span>
-            <span>{formatPrice(item.catalogPrice)}</span>
-          </div>
-        )} */}
       </div>
     </Link>
   );

@@ -16,18 +16,8 @@ interface BidFormProps {
 const BidForm: React.FC<BidFormProps> = ({ item }) => {
   const { data: session } = useSession();
   const currentBidderNumber = session?.user.currentBidderNumber;
-  const { biddersData, loading, error, refreshBiddersData } = useBidders();
+  const { refreshBiddersData } = useBidders();
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
-
-  // const matchingBidder = biddersData?.find(
-  //   (bidder) =>
-  //     bidder.auctionNumber === item.auction &&
-  //     +bidder.bidderNumber === currentBidderNumber,
-  // );
-
-  // const currentPrebid = matchingBidder?.prebids?.find(
-  //   (prebid) => +prebid.objectId === item.id,
-  // );
 
   const generateBids = (
     price: number,
@@ -83,14 +73,6 @@ const BidForm: React.FC<BidFormProps> = ({ item }) => {
       setIsSubmitting(false);
     }
   };
-
-  // if (loading || biddersData === null) {
-  //   return (
-  //     <div className="p-4 bg-beige flex flex-col gap-2">
-  //       <p>Loading...</p>
-  //     </div>
-  //   );
-  // }
 
   return (
     <div className="p-4 bg-beige flex flex-col gap-2">

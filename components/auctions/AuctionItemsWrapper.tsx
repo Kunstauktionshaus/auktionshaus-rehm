@@ -2,8 +2,6 @@
 import { ObjectsArrayValues } from "@schemas/item";
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
-import { FiChevronLeft } from "react-icons/fi";
 import { useAuctionStore } from "@stores/auctionsStore";
 import AuctionHeader from "./AuctionHeader";
 
@@ -41,7 +39,7 @@ const AuctionItemsWrapper = ({
               <span>Loading...</span>
             </div>
           ) : (
-            <AuctionItems items={items} auctionNumber={auctionNumber} />
+            <AuctionItems items={items} />
           )}
         </div>
       </>

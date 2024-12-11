@@ -10,13 +10,7 @@ import SearchModal from "./SearchModal";
 import SortModal from "./SortModal";
 import CleanButton from "./CleanButton";
 
-const AuctionItems = ({
-  items,
-  auctionNumber,
-}: {
-  items: ObjectsArrayValues;
-  auctionNumber: string;
-}) => {
+const AuctionItems = ({ items }: { items: ObjectsArrayValues }) => {
   const t = useTranslations("AuctionPage");
   const [itemsPerPage, setItemsPerPage] = useState<number>(24);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -25,7 +19,6 @@ const AuctionItems = ({
   const [selectedCategories, setSelectedCategories] = useState<number[]>([]);
   const [isSortModalOpen, setIsSortModalOpen] = useState(false);
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
-  const [isLoadingStatus, setIsLoadingStatus] = useState(true);
   const locale = useLocale();
 
   const filteredItems = items.filter((item) => {
