@@ -1,20 +1,13 @@
-import Image from "next/image";
+import Highlights from "@components/MainPageHighlights";
+import MainPageSlider from "@components/MainPageSlider";
+
 const Home = () => {
-  const nr = 312;
-  const auc = 1001;
-
-  const imageUrl = `https://vigorous-satoshi.87-106-178-189.plesk.page/images/${nr}_${auc}.png`;
-
   return (
-    <div>
-      <Image
-        src={imageUrl}
-        alt="image of item"
-        width={500}
-        height={500}
-        className="cursor-pointer object-cover"
-        quality={100}
-      />
+    <div className="w-full h-full flex flex-col gap-6 items-center justify-center">
+      <div className="w-full ">
+        <MainPageSlider />
+      </div>
+      <Highlights />
     </div>
   );
 };

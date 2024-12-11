@@ -25,3 +25,18 @@
   bottom: 20mm;
   width: calc(100% - 40mm);
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000000 !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 26px !important;
+}
+
+.swiper-slide-thumb-active {
+  border: solid 1px #567c8d;
+  padding: 4px;
+}

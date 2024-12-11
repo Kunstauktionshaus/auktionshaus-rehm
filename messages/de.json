@@ -13,6 +13,10 @@
     "serverError": "Serverfehler. Bitte versuchen Sie es später erneut."
   },
   "Auth": {
+    "register": "Registrieren Sie sich, um die Plattform zu nutzen",
+    "createAccount": "Konto erstellen",
+    "welcome": "Willkommen",
+    "loginToView": "Melden Sie sich an, um Ihr Konto zu sehen",
     "name": "Vorname",
     "surname": "Nachname",
     "birthday": "Geburtsdatum",
@@ -45,7 +49,8 @@
     "loginButton": "Anmelden",
     "registerButton": "Registrieren",
     "selectCountry": "Land wählen",
-    "searchCountry": "Land suchen"
+    "searchCountry": "Land suchen",
+    "invalidCredentials": "Ihre E-Mail-Adresse oder Passwort ist falsch."
   },
   "Not-Found": {
     "title": "Seite nicht gefunden",
@@ -53,11 +58,13 @@
     "goBackHome": "Zurück zur Startseite"
   },
   "Header": {
+    "home": "Home",
     "search": "Suchen",
     "info": "Informationen",
     "team": "Team",
     "partners": "Partner",
-    "terms": "AGB"
+    "terms": "AGB",
+    "auctions": "Auktionen"
   },
   "Invoice": {
     "invoice": "Rechnung",
@@ -122,5 +129,37 @@
   "TermsConsigners": {
     "title": "Bedingungen für Einlieferer"
   },
-  "ZodErrors": {}
+  "ZodErrors": {},
+
+  "AuctionNav": {
+    "categories": "Kategorien",
+    "1": "Schmuck & Silber",
+    "2": "Teppiche",
+    "3": "Möbel und Leuchten",
+    "4": "Uhren",
+    "5": "Graphik Bücher und Fotographie",
+    "6": "Varia Volkskunst",
+    "7": "Glas Porzellan Keramik",
+    "8": "Gemälde, Aquarelle, Zeichnungen",
+    "9": "Eigen"
+  },
+  "AuctionPage": {
+    "auction": "Auktion",
+    "sortBy": "Sortieren nach",
+    "perPage": "Pro Seite",
+    "searchByKey": "Nach Schlüsselwort suchen",
+    "lotOrder": "Los-Reihenfolge",
+    "priceAsc": "Preis: Niedrig bis Hoch",
+    "priceDesc": "Preis: Hoch bis Niedrig",
+    "items": "Artikel",
+    "apply": "Änderungen anwenden",
+    "clear": "Alle Filter löschen",
+    "filtersSort": "Filter & Sortierung",
+    "itemsNotFound": "Keine Artikel gefunden",
+    "loading": "Wird geladen...",
+    "viewAll": "Alle Artikel aus Auktion №"
+  },
+  "MainPage": {
+    "foreword": "Vorwort"
+  }
 }

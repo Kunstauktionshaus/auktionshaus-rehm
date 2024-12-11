@@ -7,19 +7,21 @@ const VerifyForm = () => {
   const [loading, setLoading] = useState(false);
   const [verified, setVerified] = useState(false);
   const [isCodeResent, setIsCodeResent] = useState(false);
-  const [email, setEmail] = useState<string | null>(null);
+  // const [email, setEmail] = useState<string | null>(null);
   const [verificationCode, setVerificationCode] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
 
   const searchParams = useSearchParams();
+  const email = searchParams.get("email");
+  const redirect = searchParams.get("redirect") || "/";
   const router = useRouter();
 
-  useEffect(() => {
-    const emailParam = searchParams.get("email");
-    if (emailParam) {
-      setEmail(emailParam);
-    }
-  }, [searchParams]);
+  // useEffect(() => {
+
+  //   if (emailParam) {
+  //     setEmail(emailParam);
+  //   }
+  // }, [searchParams]);
 
   const verifyEmail = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,7 +43,7 @@ const VerifyForm = () => {
       if (res.ok) {
         setVerified(true);
         setTimeout(() => {
-          router.push("/login");
+          router.push(`/login?redirect=${encodeURIComponent(redirect)}`);
         }, 2000);
       } else {
         const data = await res.json();

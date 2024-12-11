@@ -52,16 +52,19 @@ export async function POST(req: NextRequest) {
       const hashedVerifyToken = getHashedVerifyToken(verifyToken);
       const verifyTokenExpired = getVerifyTokenExpired().toISOString();
 
+      const [countryCode, countryName] = data.country.split("-");
+
       const newCustomer = NinoxRegisterFormSchema.parse({
         D: data.name,
         E: data.surname,
-        A2: data.birthday ? new Date(data.birthday) : undefined,
-        W: data.firma,
+        W: data.company,
         L: data.iban,
-        R: data.street,
+        R: data.address,
+        W2: data.address2,
         T: data.plz,
         U: data.city,
-        C2: data.countryCode,
+        C2: countryCode,
+        B2: countryName,
         P: data.phone,
         I: data.email,
         E2: hashedPassword,

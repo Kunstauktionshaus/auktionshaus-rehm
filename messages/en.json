@@ -14,6 +14,10 @@
   },
 
   "Auth": {
+    "register": "Sign up to start using the platform",
+    "createAccount": "Create an account",
+    "welcome": "Welcome",
+    "loginToView": "Log in to view your account",
     "name": "Name",
     "surname": "Surname",
     "birthday": "Birthday",
@@ -46,7 +50,8 @@
     "loginButton": "Login",
     "registerButton": "Register",
     "selectCountry": "Select country",
-    "searchCountry": "Search country"
+    "searchCountry": "Search country",
+    "invalidCredentials": "Your email address or password is incorrect."
   },
   "Not-Found": {
     "title": "Page not found",
@@ -54,11 +59,13 @@
     "goBackHome": "Go back home"
   },
   "Header": {
+    "home": "Home",
     "search": "Search",
     "info": "Info",
     "team": "Team",
     "partners": "Partners",
-    "terms": "Terms"
+    "terms": "Terms",
+    "auctions": "Auctions"
   },
   "Invoice": {
     "invoice": "Invoice",
@@ -123,5 +130,38 @@
     "title": "Auction conditions for consignors"
   },
 
-  "ZodErrors": {}
+  "ZodErrors": {},
+
+  "AuctionNav": {
+    "categories": "Categories",
+    "1": "Jewelry & Silver",
+    "2": "Carpets",
+    "3": "Furniture and Lighting",
+    "4": "Clocks",
+    "5": "Prints, Books, and Photography",
+    "6": "Miscellaneous Folk Art",
+    "7": "Glass, Porcelain, Ceramics",
+    "8": "Paintings, Watercolors, Drawings",
+    "9": "Consignments (Private Collection)"
+  },
+
+  "AuctionPage": {
+    "auction": "Auction",
+    "sortBy": "Sort by",
+    "perPage": "Per Page",
+    "searchByKey": "Search by keyword",
+    "lotOrder": "Lot Order",
+    "priceAsc": "Price: Low to High",
+    "priceDesc": "Price: High to Low",
+    "items": "items",
+    "apply": "Apply Changes",
+    "clear": "Clear All Filters",
+    "filtersSort": "Filters & Sort",
+    "itemsNotFound": "Items not found",
+    "loading": "Loading...",
+    "viewAll": "View all items from auction №"
+  },
+  "MainPage": {
+    "foreword": "Foreword"
+  }
 }

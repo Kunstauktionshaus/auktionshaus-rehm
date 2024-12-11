@@ -12,13 +12,12 @@ const Logo = () => {
         <Image
           src={LOGO}
           alt="Auktionhaus GR Logo"
-          className="w-20 h-auto md:w-28 md:h-auto"
+          className="w-16 h-auto md:w-28 md:h-auto"
           priority
         />
 
         <div className="hidden md:flex flex-col">
           <span>
-            {" "}
             <span className="text-xs md:text-sm font-bold text-black uppercase">
               Kunst
             </span>
@@ -30,7 +29,7 @@ const Logo = () => {
           <span className="text-xs md:text-sm font-bold text-black uppercase">
             Georg Rehm
           </span>
-          <span className="text-xs md:text-sm font-semibold text-teal uppercase">
+          <span className="text-xs md:text-sm font-semibold text-honey uppercase">
             Im Martinipark
           </span>
         </div>

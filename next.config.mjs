@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+import withPlaiceholder from "@plaiceholder/next";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin();
@@ -12,9 +13,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "vigorous-satoshi.87-106-178-189.plesk.page",
+        hostname: "supabase.87.106.90.112.sslip.io",
         port: "",
-        pathname: "/images/**",
+        pathname: "/**",
       },
     ],
   },

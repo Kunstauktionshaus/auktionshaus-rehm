@@ -7,8 +7,8 @@ import {
   CodeLoginFormSchema,
   CodeLoginFormValues,
 } from "@schemas/login-schema";
-import InputField from "@components/InputField";
-import PasswordInput from "@components/PasswordInput";
+import InputField from "@components/shared/InputField";
+import PasswordInput from "@components/shared/PasswordInput";
 import { useTranslations } from "next-intl";
 
 const CodeLoginPage = () => {
